@@ -1,0 +1,2 @@
+const courses = [{id:1,title:"HTML", price:100},{id:2,title:"CSS", price:150},{id:3,title:"JS", price:200},{id:4,title:"Flutter", price:500},{id:5,title:"React", price:300},{id:6,title:"Angular", price:200},{id:7,title:"Vue", price:200}];
+module.exports = courses;
