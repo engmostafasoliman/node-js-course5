@@ -10,11 +10,8 @@ let coursesController = require('../controller/courses_controller');
 /// get all courses
 router.route('/')
 .get(coursesController.getCourses  )
-.post( [
-    body('title').notEmpty(),
-    body('price').isNumeric(),
-  ],
-  validationSchema,
+.post( 
+  ...validationSchema(),
 coursesController.postCourse );
 
  
