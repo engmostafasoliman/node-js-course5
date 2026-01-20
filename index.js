@@ -12,7 +12,7 @@ mongoose.connect(url,)
     });
 
 app.use(express.json());
-const coursesRouter=require('./routes/course_route');
+const coursesRouter=require('./routes/course.route');
 
 app.use('/api/courses/',coursesRouter); //localhost => localhost:4000/api/courses 
 

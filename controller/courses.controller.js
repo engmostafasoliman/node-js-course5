@@ -8,13 +8,16 @@ const getCourses =async  (req,res)=> {
     const courses = await Course.find();
     res.send(courses);
 } ;
-
-const getCourseById = (req,res)=>{
+//fetch course by id
+const getCourseById =async (req,res)=>{
     // console.log(req.params);
-    const courseId = +req.params.courseId;
-    const course = Course.find(c=>c.id===courseId);
+    try {
+        const courseId = req.params.courseId;
+    const course =await Course.findById(courseId);
     if(!course) res.status(404).json({msg:"The course with the given ID was not found",status :404});
-    res.json(course);
+    res.json(course);} catch (error) {
+        return res.status(400).json({ msg: "Invaled ID Object" });
+    }
 }  ;
 
 const postCourse = async (req, res) => {
