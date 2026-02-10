@@ -126,6 +126,6 @@ Specify a license (e.g., MIT) or add your preferred license file.
 
 If you have questions about the course or this project, open an issue or reach out to the repository owner.
 
---
+---
 
 If you'd like, I can update the README with details I can extract from the repository (entry point, available npm scripts, used frameworks like Express, DB connection type). Tell me if you want me to read the repo and populate the README with concrete values.
