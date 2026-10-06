@@ -1,18 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const {body }=require('express-validator');
-const validationSchema = require('../middleware/validation_schema');
+const validationSchema = require('../middleware/validation.schema');
 
 
 
-let coursesController = require('../controller/courses_controller');
+let coursesController = require('../controller/courses.controller');
 
 /// get all courses
 router.route('/')
 .get(coursesController.getCourses  )
-.post(validationSchema, coursesController.postCourse );
+.post( 
+  ...validationSchema(),
+coursesController.postCourse );
 
-
+ 
 /// get course by id
 router.route('/:courseId')
 .get(coursesController.getCourseById )
